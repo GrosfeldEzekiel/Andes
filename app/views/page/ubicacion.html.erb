@@ -1,0 +1,36 @@
+<div class="ubic">
+  <div class="title">
+    <h1>¿Donde nos encontramos?</h1>
+  </div>
+  <div class="info">
+    <p>Las cabañas <strong>Los Andes</strong> están ubicadas sobre la Av.E.Bustillo 13000 a tan solo 4km del cerro Campanario (5 minutos), a tan solo 3 cuadras
+    del lago <strong>Nahuel Huapi</strong> con una vista increible de las montañas. Ademas estan estrategicamente ubicadas en una zona urbana con dos supermecados y
+  diversos negocios en su cercania.</p>
+  </div>
+</div>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript">
+      $(window).scroll(function() {
+      if ($(document).scrollTop() > 1) {
+        $('.navbar').css('background-color', '#fff');;
+      } else {
+        $('.navbar').css('background-color', 'transparent');
+      }
+    });
+    </script>
+
+    <script>
+      var map;
+      function initMap() {
+        ubicacion = {lat: -41.100325, lng: -71.446515};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: ubicacion,
+          zoom: 15
+        });
+        marker = new google.maps.Marker({position: ubicacion, map: map})
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe5Q_IsK7uz5BfrzaAB1kDZDwHe8dW-XY&callback=initMap"
+    async defer></script>
