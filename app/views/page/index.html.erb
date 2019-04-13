@@ -39,12 +39,14 @@
 <!-- SCRIPTS -->
 
 <script type="text/javascript">
-  $(function(){
-  $('.menu').css({ height: $(window).innerHeight() });
-  $(window).resize(function(){
-    $('.menu').css({ height: $(window).innerHeight() });
-  });
-});
+  if($(window).innerHeight() < 700){
+    $('.menu').css({ height: $(window).innerHeight()*0.87 });
+    $(window).resize(function(){
+      $('.menu').css({ height: $(window).innerHeight()*0.87 });
+    });
+  }else{
+    });
+  }
 </script>
 <script type="text/javascript">
   $('#nv2').hide();
