@@ -1,14 +1,43 @@
 <div class="menu">
-  <div class="mySlides">
-    <img src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409173658_IMG_0145.JPG" width="100%">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="4000">
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img class="d-block w-100" src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409173008_IMG_0133.JPG" alt="First slide">
   </div>
-  <div class="mySlides">
-    <img src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409173008_IMG_0133.JPG" width="100%">
+  <div class="carousel-item">
+    <img class="d-block w-100" src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409173658_IMG_0145.JPG" alt="Second slide">
   </div>
-  <div class="mySlides">
-    <img src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409174042_IMG_0152.JPG" width="100%">
+  <div class="carousel-item">
+    <img class="d-block w-100" src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409174042_IMG_0152.JPG" alt="Third slide">
   </div>
 </div>
+<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  </a>
+</div>
+</div>
+
+
+<div class="text">
+  <div class="title">
+    <h1>Cabaña los andes</h1>
+  </div>
+  <div class="info">
+    <p>Nos encontramos en San Carlos de Bariloche, a 13 kilometros del centro de la ciudad. Estamos ubicados a 5 minutos a pie de la playa, y a 20 minutos en auto del Cerro Catedral.
+       <br>Contamos con aparcamiento privado y gratuito, asi como también de servicio free WiFi en todo el complejo.
+       <br>Cerca de nuestro alojamiento se pueden realizar todo tipo de actividades deportivas como ciclismo, pesca, tracking, kayac, ski y snowboard.<br>
+       Estamos en medio de una zona comercial en donde también hay supermercado, farmacia, panadería, cervecerías, entre otros. </p>
+  </div>
+  <div class="link">
+    <a class="reserva" target="_blank" href="https://www.booking.com/hotel/ar/los-andes.es-ar.html?label=gen173bo-1DCAEoggI46AdILFgDaAyIAQGYASy4ARnIAQzYAQPoAQH4AQKIAgGYAgKoAgO4AsX_yOUFwAIB;sid=6b31d4b85d52625fd51ea05c78737940;bhgwe_cep=1;dest_id=-1012061;dest_type=city;dist=0;group_adults=2;hapos=1;hpos=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1555185627;srpvid=c36c8cadeca900e9;type=total;ucfs=1&#hotelTmpl">
+    Reservar Ahora</a>
+  </div>
+</div>
+
+<div id="map1"></div>
+<!-- SCRIPTS -->
+
 <script type="text/javascript">
   $(function(){
   $('.menu').css({ height: $(window).innerHeight() });
@@ -17,11 +46,10 @@
   });
 });
 </script>
-
 <script type="text/javascript">
   $('#nv2').hide();
   $(window).scroll(function() {
-  if ($(document).scrollTop() > 60) {
+  if ($(document).scrollTop() >= 40) {
     $('#nv1').hide();
     $('#nv2').show();
     $('.navbar').css('background-color', '#fff');
@@ -37,7 +65,28 @@
     $('#nv2').hide();
     $('#nv1').show();
     $('.navbar').css('background-color', 'transparent');
-
+    $('.header .navbar .navbar-collapse a').css('color', '#fff');
+    $('.header .navbar .navbar-collapse a').hover(function() {
+      $(this).css('color', '#dab23f')
+    }, function() {
+      $(this).css('color', '#fff')
+      $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+    });;
+    $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
   }
 });
 </script>
+
+<script>
+  var map;
+  function initMap() {
+    ubicacion = {lat: -41.100325, lng: -71.446515};
+    map = new google.maps.Map(document.getElementById('map1'), {
+      center: ubicacion,
+      zoom: 15
+    });
+    marker = new google.maps.Marker({position: ubicacion, map: map})
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe5Q_IsK7uz5BfrzaAB1kDZDwHe8dW-XY&callback=initMap"
+async defer></script>

@@ -20,6 +20,7 @@
   top: 0;
   width: 100%;
   opacity: 0.969;
+  z-index: 900;
 }
 .header .navbar .navbar-collapse a{
   color: #fff;
@@ -42,9 +43,9 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px;
 }
 .title{
+  margin-top: 3%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -65,11 +66,10 @@
   color: gray;
   font-family: sans-serif;
 }
-.ubic{
+.text{
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  background-color: #fafaf8;
+  width: 80%;
 }
 .color-change{
   background-color: #fff;
@@ -77,15 +77,51 @@
 .menu{
   overflow: hidden;
 }
-#img1{
-  background-image: url('https://s3-sa-east-1.amazonaws.com/los-andes/20190409173008_IMG_0133.JPG');
-  background-position: top;
+.pre{
+  overflow: hidden;
 }
-#img2{
-  background-image: url('https://s3-sa-east-1.amazonaws.com/los-andes/20190409173658_IMG_0145.JPG');
-  background-position: top;
+#map1{
+  height: 200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
-#img3{
-  background-image: url('https://s3-sa-east-1.amazonaws.com/los-andes/20190409174042_IMG_0152.JPG');
-  background-position: top;
+.link{
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  margin-bottom: 5%;
+}
+.reserva{
+  color: white;
+  background-color: #404040;
+  padding: 10%;
+  text-align: center;
+  display: inline-table;
+  border-radius: 10px;
+}
+.reserva:hover{
+  color: white;
+  text-decoration: none;
+  background-color: #848484;
+}
+.fotos{
+  overflow: hidden;
+}
+.reserva1{
+  color: white;
+  background-color: #404040;
+  padding: 1%;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.reserva1:hover{
+  color: white;
+  text-decoration: none;
+  background-color: #848484;
+}
+.link1{
+  height: 50px;
+  display: block;
 }
