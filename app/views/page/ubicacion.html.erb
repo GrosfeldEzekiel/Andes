@@ -1,26 +1,62 @@
+<div class="pre">
+  <div class="mySlides" id="img1">
+  </div>
+  <div class="mySlides" id="img2">
+  </div>
+  <div class="mySlides" id="img3">
+  </div>
+</div>
 <div class="ubic">
   <div class="title">
     <h1>¿Donde nos encontramos?</h1>
   </div>
   <div class="info">
-    <p>Las cabañas <strong>Los Andes</strong> están ubicadas sobre la Av.E.Bustillo 13000 a tan solo 4km del cerro Campanario (5 minutos), a tan solo 3 cuadras
-    del lago <strong>Nahuel Huapi</strong> con una vista increible de las montañas. Ademas estan estrategicamente ubicadas en una zona urbana con dos supermecados y
-  diversos negocios en su cercania.</p>
+    <p lang="es"><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. In nec dictum erat, eget fermentum tortor.
+       Nullam tempor pharetra ipsum ac lacinia. Nunc ultrices, lorem et faucibus iaculis, felis odio hendrerit massa, id pharetra odio nibh vitae dui.
+       Donec vitae accumsan quam, nec convallis augue. <strong>Phasellus</strong> tortor libero, bibendum in elementum quis, maximus maximus tortor.</p>
   </div>
 </div>
   </head>
   <body>
     <div id="map"></div>
     <script type="text/javascript">
+      $(function(){
+      $('.mySlides').css({ height: $(window).innerHeight()*0.87 });
+      $(window).resize(function(){
+        $('.mySlides').css({ height: $(window).innerHeight()*0.87 });
+      });
+    });
+    </script>
+    <script type="text/javascript">
+      $('#nv2').hide();
       $(window).scroll(function() {
-      if ($(document).scrollTop() > 1) {
-        $('.navbar').css('background-color', '#fff');;
+      if ($(document).scrollTop() >= 40) {
+        $('#nv1').hide();
+        $('#nv2').show();
+        $('.navbar').css('background-color', '#fff');
+        $('.header .navbar .navbar-collapse a').css('color', 'gray');
+        $('.header .navbar .navbar-collapse a').hover(function() {
+          $(this).css('color', '#dab23f')
+        }, function() {
+          $(this).css('color', 'gray')
+          $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+        });;
+        $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
       } else {
+        $('#nv2').hide();
+        $('#nv1').show();
         $('.navbar').css('background-color', 'transparent');
+        $('.header .navbar .navbar-collapse a').css('color', '#fff');
+        $('.header .navbar .navbar-collapse a').hover(function() {
+          $(this).css('color', '#dab23f')
+        }, function() {
+          $(this).css('color', '#fff')
+          $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+        });;
+        $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
       }
     });
     </script>
-
     <script>
       var map;
       function initMap() {

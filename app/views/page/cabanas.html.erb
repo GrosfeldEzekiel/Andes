@@ -1,0 +1,17 @@
+<script type="text/javascript">
+  $(window).scroll(function() {
+  if ($(document).scrollTop() > 60) {
+    $('.navbar').css('background-color', '#fff');
+    $('.header .navbar .navbar-collapse a').css('color', 'gray');
+    $('.header .navbar .navbar-collapse a').hover(function() {
+      $(this).css('color', '#dab23f')
+    }, function() {
+      $(this).css('color', 'gray')
+      $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+    });;
+    $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+  } else {
+    $('.navbar').css('background-color', 'transparent');
+  }
+});
+</script>

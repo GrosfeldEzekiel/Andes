@@ -13,17 +13,16 @@
  *= require_tree .
  *= require_self
  */
-
 .header .navbar{
   background-color: transparent;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.969;
 }
 .header .navbar .navbar-collapse a{
-  color: gray;
+  color: #fff;
 }
 .header .navbar .navbar-collapse a:hover{
   color: #dab23f;
@@ -50,7 +49,8 @@
   margin-right: auto;
   text-align: center;
   padding: 2%;
-  color: #6c757d;
+  color: #605e5e;
+  font-weight: 600;
   font-family: sans-serif;
 }
 .info{
@@ -61,12 +61,11 @@
   padding-right: 2%;
   text-align: center;
   font-size: 15pt;
-  width: 60%;
+  width: 100%;
   color: gray;
   font-family: sans-serif;
 }
 .ubic{
-  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -74,4 +73,19 @@
 }
 .color-change{
   background-color: #fff;
+}
+.menu{
+  overflow: hidden;
+}
+#img1{
+  background-image: url('https://s3-sa-east-1.amazonaws.com/los-andes/20190409173008_IMG_0133.JPG');
+  background-position: top;
+}
+#img2{
+  background-image: url('https://s3-sa-east-1.amazonaws.com/los-andes/20190409173658_IMG_0145.JPG');
+  background-position: top;
+}
+#img3{
+  background-image: url('https://s3-sa-east-1.amazonaws.com/los-andes/20190409174042_IMG_0152.JPG');
+  background-position: top;
 }

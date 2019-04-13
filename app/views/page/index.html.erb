@@ -1,11 +1,43 @@
-<img src="https://00e9e64baccee9febf156aa9c6008ab0822b4cd3463b1cb59b-apidata.googleusercontent.com/download/storage/v1/b/losandes/o/20190320143811_IMG_0009.JPG?qk=AD5uMEvd9JZhBZLKbMGvEbClHz6ta-hTTX_rR55beMvkn6JfD3XxrqiKkkM8TmrCFqr5Uf7-VUn9qa9NZZwwB6Ckp_5b2Opned82iLafQpcllPEA7-Q_p0ngeA-kFBydi3uCIHu2l6mUUZf-ba4Ve333HGdVQJW5bXSSm7pUKAeQhIYcwUEIv3qxafCp-4OcM90EOWzVoc_ew3pWHMBwypPvssl8FaUzsfLtLGngHXADL8yTAr1IP2_6NgIpFg6q12JXApqEQV6I6sepGbFMOuyPfFp3mVMO_R6wcfvRFFXall8lRq060LzpM5ZAu037JRtUsJBfun0rSILlCrxDLwppvP8woP6nHHWG-ukZI5o0EKuF4Q0loO1VVOjlI2S9h-ac7zL3CuKGxUK0Cej8hinBsemMJFnw2Vof2W_QSTfobEAuldudSUVoxfURQ7tE5j8XdbZpFdATouu2EJiUfzvbSSTFyA-ocTo-I8ZL5Wip4c_SCQq86rx-A7tjQHLK9txx8JSYfOJv_ZNGL-2sVIWEd10lWPOF2aeEVwD6gZAKXaAVEbYbpBTiYfYON-YIRU35lrW1WSW2SwImmKjLr8U9O3L1WNEd9fxgVMHh7dBGjRfqM0EDQxN79RowqYuNdJHryeMUdf2OVxsDHpDhxc9V9rikJxq6hzILmXEaEjCv2L1wnQCRkbZHRgEzAeL34PTQi7N3pc4wl1Ea104W-zf9vSwCj3Va9hMnmUqelR1LCmibW8W43iz9LRowFgFdVhKfeS89zXLiT1QcG5-PfkCpVnA9fZK7iQ" alt="">
+<div class="menu">
+  <div class="mySlides">
+    <img src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409173658_IMG_0145.JPG" width="100%">
+  </div>
+  <div class="mySlides">
+    <img src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409173008_IMG_0133.JPG" width="100%">
+  </div>
+  <div class="mySlides">
+    <img src="https://s3-sa-east-1.amazonaws.com/los-andes/20190409174042_IMG_0152.JPG" width="100%">
+  </div>
+</div>
+<script type="text/javascript">
+  $(function(){
+  $('.menu').css({ height: $(window).innerHeight() });
+  $(window).resize(function(){
+    $('.menu').css({ height: $(window).innerHeight() });
+  });
+});
+</script>
 
 <script type="text/javascript">
+  $('#nv2').hide();
   $(window).scroll(function() {
   if ($(document).scrollTop() > 60) {
-    $('.navbar').css('background-color', '#fff');;
+    $('#nv1').hide();
+    $('#nv2').show();
+    $('.navbar').css('background-color', '#fff');
+    $('.header .navbar .navbar-collapse a').css('color', 'gray');
+    $('.header .navbar .navbar-collapse a').hover(function() {
+      $(this).css('color', '#dab23f')
+    }, function() {
+      $(this).css('color', 'gray')
+      $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+    });;
+    $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
   } else {
+    $('#nv2').hide();
+    $('#nv1').show();
     $('.navbar').css('background-color', 'transparent');
+
   }
 });
 </script>
