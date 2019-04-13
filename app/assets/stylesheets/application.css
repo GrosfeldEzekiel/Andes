@@ -125,3 +125,6 @@
   height: 50px;
   display: block;
 }
+.close{
+  display: none;
+}

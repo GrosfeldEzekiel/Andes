@@ -3,8 +3,10 @@
     <a class="navbar-brand" href="/">
       <img src=" https://s3-sa-east-1.amazonaws.com/los-andes/iconoW.png" width="164px" height="75.2px" id="nv1">
     <img src=" https://s3-sa-east-1.amazonaws.com/los-andes/iconoB.png" width="164px" height="75.2px" id="nv2"> </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" data-label-expanded="Close">
       <span class="navbar-toggler-icon"></span>
+      <span class="my-1 mx-2 close">X</span>
+
     </button>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -26,3 +28,13 @@
   </nav>
 
 </header>
+
+<script type="text/javascript">
+  $('.navbar-toggler').on('click', function(){
+    $('.collapse').toggle();
+    $('.navbar-toggler-icon').toggle();
+    $('.close').toggle(9000);
+  })
+</script>
+<script type="text/javascript">
+</script>
