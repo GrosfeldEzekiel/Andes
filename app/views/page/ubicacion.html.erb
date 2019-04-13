@@ -27,11 +27,8 @@
   <body>
     <div id="map"></div>
     <script type="text/javascript">
-      if($(window).innerHeight() < 700){
+      if($(window).innerHeight() < 700 && $(window).innerWidth() > 1200){
         $('.pre').css({ height: $(window).innerHeight()*0.87 });
-        $(window).resize(function(){
-          $('.pre').css({ height: $(window).innerHeight()*0.87 });
-        });
       }else{
       }
     </script>
@@ -77,5 +74,3 @@
         marker = new google.maps.Marker({position: ubicacion, map: map})
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe5Q_IsK7uz5BfrzaAB1kDZDwHe8dW-XY&callback=initMap"
-    async defer></script>
