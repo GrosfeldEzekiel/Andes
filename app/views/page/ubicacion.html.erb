@@ -12,6 +12,9 @@
   </div>
 </div>
 </div>
+<div class="button-down1">
+  <a id="butt" href="#"><i id="il" class="fas fa-arrow-down"></i></a>
+</div>
 </div>
 <div class="text">
   <div class="title">
@@ -26,10 +29,34 @@
   </head>
   <body>
     <div id="map"></div>
+
+<!-- SCRIPTS -->
+    <script type="text/javascript">
+      $(function min(){
+        $('#il').animate({marginTop: "50px"}, 1000, function(){$('i').animate({marginTop: "-50px"}, 1000, function(){min()})})
+      });
+      $(function(){
+        $('#il').on('click', function(){
+          $('html, body').animate({scrollTop: $(".text").offset().top-100}, 2000)
+        })
+      })
+    </script>
+    <script type="text/javascript">
+      $(function(){
+          if ($(window).innerWidth() < 1200) {
+            nsize = $('.carousel-inner:visible').height()*0.8;
+            $('.button-down1').css('margin-top', nsize);
+          }else{
+            size = $('.pre:visible').height()*0.85;
+            $('.button-down1').css('margin-top', size);
+          }
+      })
+    </script>
     <script type="text/javascript">
       if($(window).innerHeight() < 700 && $(window).innerWidth() > 1200){
         $('.pre').css({ height: $(window).innerHeight()*0.87 });
       }else{
+        $('.button-down1').hide();
       }
     </script>
 

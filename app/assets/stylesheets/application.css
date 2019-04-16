@@ -51,8 +51,10 @@
   text-align: center;
   padding: 2%;
   color: #605e5e;
-  font-weight: 600;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+.title h1{
+  font-weight: 300;
 }
 .info{
   margin-left: auto;
@@ -64,7 +66,7 @@
   font-size: 15pt;
   width: 100%;
   color: gray;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .text{
   margin-left: auto;
@@ -127,4 +129,39 @@
 }
 .close{
   display: none;
+}
+.button-down{
+  position: absolute;
+  z-index: 888;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  margin-left: 50%;
+  font-size: 400%;
+}
+i{
+  color: white;
+}
+.button-down1{
+  position: absolute;
+  z-index: 888;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  margin-left: 50%;
+  font-size: 360%;
+}
+#wpp{
+  color: green;
+}
+#wpp:hover{
+  text-decoration: none;
+  color: #33da33;
+}
+#email{
+  color: #f57c00;
+}
+#email:hover{
+  text-decoration: none;
+  color: #ff9c36;
 }

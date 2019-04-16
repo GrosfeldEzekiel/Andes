@@ -1,17 +1,53 @@
+<div class="text" style="margin-top:100px;">
+  <div class="title">
+    <h1>Contactanos</h1>
+  </div>
+  <div class="info">
+    <p lang="es"><br>Tenes WhatsApp? <a id="wpp" target="_blank" href="https://wa.me/542944661505">Escríbenos por WhatsApp</a><br><br>Tenes email? <a id="email" href="mailto:grosfeldezekiel@gmail.com?subject=Consulta Cabañas">Envíanos un Email</a>
+  </div>
+</div>
+
+
+
+<!-- SCRIPTS -->
 <script type="text/javascript">
-  $(window).scroll(function() {
-  if ($(document).scrollTop() > 60) {
-    $('.navbar').css('background-color', '#fff');
-    $('.header .navbar .navbar-collapse a').css('color', 'gray');
-    $('.header .navbar .navbar-collapse a').hover(function() {
-      $(this).css('color', '#dab23f')
-    }, function() {
-      $(this).css('color', 'gray')
-      $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
-    });;
+  $('.header .navbar .navbar-collapse a').hover(function() {
+    $(this).css('color', '#dab23f')
+  }, function() {
+    $(this).css('color', 'gray')
     $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
-  } else {
-    $('.navbar').css('background-color', 'transparent');
-  }
-});
+  });;
+  $('#nv1').hide();
+  $('#nv2').show();
+  $('.navbar').css('background-color', '#fff');
+  $('.header .navbar .navbar-collapse a').css('color', 'gray');
+    $(window).scroll(function() {
+    if ($(document).scrollTop() >= -1) {
+      $('#nv1').hide();
+      $('#nv2').show();
+      $('.navbar').css('background-color', '#fff');
+      $('.header .navbar .navbar-collapse a').css('color', 'gray');
+      $('.header .navbar .navbar-collapse a').hover(function() {
+        $(this).css('color', '#dab23f')
+      }, function() {
+        $(this).css('color', 'gray')
+        $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+      });;
+      $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+    } else {
+      $('#nv1').hide();
+      $('#nv2').show();
+      $('.navbar').css('background-color', '#fff');
+      $('.header .navbar .navbar-collapse a').css('color', 'gray');
+      $('.header .navbar .navbar-collapse a').hover(function() {
+        $(this).css('color', '#dab23f')
+      }, function() {
+        $(this).css('color', 'gray')
+        $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+      });;
+      $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+    }
+  });
+  
+
 </script>

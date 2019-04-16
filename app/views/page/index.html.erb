@@ -16,6 +16,9 @@
   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
   </a>
 </div>
+<div class="button-down">
+  <a id="butt" href="#"><i id="ii" class="fas fa-arrow-down"></i></a>
+</div>
 </div>
 
 
@@ -24,10 +27,13 @@
     <h1>Cabaña los andes</h1>
   </div>
   <div class="info">
-    <p>Nos encontramos en San Carlos de Bariloche, a 13 kilometros del centro de la ciudad. Estamos ubicados a 5 minutos a pie de la playa, y a 20 minutos en auto del Cerro Catedral.
-       <br>Contamos con aparcamiento privado y gratuito, asi como también de servicio free WiFi en todo el complejo.
-       <br>Cerca de nuestro alojamiento se pueden realizar todo tipo de actividades deportivas como ciclismo, pesca, tracking, kayac, ski y snowboard.<br>
-       Estamos en medio de una zona comercial en donde también hay supermercado, farmacia, panadería, cervecerías, entre otros. </p>
+    <p>Los Andes se encuentra en San Carlos de Bariloche y ofrece jardín, wifi gratis y vistas a la montaña. El alojamiento se encuentra a 11 km de la estación de esquí de Cerro Catedral y a 13 km del centro cívico.
+
+El departamento está equipado con TV por cable.
+
+La bahía Serena está a 1 km del departamento. El aeropuerto más cercano es el de San Carlos de Bariloche, ubicado a 27 km.
+
+¡Hablamos tu idioma! </p>
   </div>
   <div class="link">
     <a class="reserva" target="_blank" href="https://www.booking.com/hotel/ar/los-andes.es-ar.html?label=gen173bo-1DCAEoggI46AdILFgDaAyIAQGYASy4ARnIAQzYAQPoAQH4AQKIAgGYAgKoAgO4AsX_yOUFwAIB;sid=6b31d4b85d52625fd51ea05c78737940;bhgwe_cep=1;dest_id=-1012061;dest_type=city;dist=0;group_adults=2;hapos=1;hpos=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1555185627;srpvid=c36c8cadeca900e9;type=total;ucfs=1&#hotelTmpl">
@@ -37,11 +43,32 @@
 
 <div id="map1"></div>
 <!-- SCRIPTS -->
-
+<script type="text/javascript">
+  $(function min(){
+    $('#ii').animate({marginTop: "50px"}, 1000, function(){$('i').animate({marginTop: "-50px"}, 1000, function(){min()})})
+  });
+  $(function(){
+    $('#ii').on('click', function(){
+      $('html, body').animate({scrollTop: $(".text").offset().top-100}, 2000)
+    })
+  })
+</script>
+<script type="text/javascript">
+  $(function(){
+      if ($(window).innerWidth() < 1200) {
+        nsize = $('.carousel-inner:visible').height()*0.8;
+        $('.button-down').css('margin-top', nsize);
+      }else{
+        size = $('.menu:visible').height()*0.85;
+        $('.button-down').css('margin-top', size);
+      }
+  })
+</script>
 <script type="text/javascript">
   if($(window).innerHeight() < 700 && $(window).innerWidth() > 1200){
     $('.menu').css({ height: $(window).innerHeight() });
   }else{
+    $('.button-down').hide();
   }
 </script>
 <script type="text/javascript">
