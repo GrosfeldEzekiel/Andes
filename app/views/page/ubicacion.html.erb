@@ -33,7 +33,7 @@
 <!-- SCRIPTS -->
     <script type="text/javascript">
       $(function min(){
-        $('#il').animate({marginTop: "50px"}, 1000, function(){$('i').animate({marginTop: "-50px"}, 1000, function(){min()})})
+        $('#il').animate({marginTop: "90px"}, 2500, function(){$('#il').animate({marginTop: "-90px"}, 1, function(){min()})})
       });
       $(function(){
         $('#il').on('click', function(){
@@ -61,34 +61,48 @@
     </script>
 
     <script type="text/javascript">
-      $('#nv2').hide();
-      $(window).scroll(function() {
-      if ($(document).scrollTop() >= 40) {
-        $('#nv1').hide();
-        $('#nv2').show();
-        $('.navbar').css('background-color', '#fff');
-        $('.header .navbar .navbar-collapse a').css('color', 'gray');
-        $('.header .navbar .navbar-collapse a').hover(function() {
-          $(this).css('color', '#dab23f')
-        }, function() {
-          $(this).css('color', 'gray')
-          $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
-        });;
-        $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
-      } else {
+      if($(window).innerHeight() < 700 && $(window).innerWidth() > 1200){
         $('#nv2').hide();
-        $('#nv1').show();
-        $('.navbar').css('background-color', 'transparent');
-        $('.header .navbar .navbar-collapse a').css('color', '#fff');
-        $('.header .navbar .navbar-collapse a').hover(function() {
-          $(this).css('color', '#dab23f')
-        }, function() {
-          $(this).css('color', '#fff')
+        $(window).scroll(function() {
+        if ($(document).scrollTop() >= 40) {
+          $('#nv1').hide();
+          $('#nv2').show();
+          $('.navbar').css('background-color', '#fff');
+          $('.header .navbar .navbar-collapse a').css('color', 'gray');
+          $('.header .navbar .navbar-collapse a').hover(function() {
+            $(this).css('color', '#dab23f')
+          }, function() {
+            $(this).css('color', 'gray')
+            $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+          });;
           $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
-        });;
+        } else {
+          $('#nv2').hide();
+          $('#nv1').show();
+          $('.navbar').css('background-color', 'transparent');
+          $('.header .navbar .navbar-collapse a').css('color', '#fff');
+          $('.header .navbar .navbar-collapse a').hover(function() {
+            $(this).css('color', '#dab23f')
+          }, function() {
+            $(this).css('color', '#fff')
+            $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+          });;
+          $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
+        }
+      });
+    }else{
+      $('.header .navbar .navbar-collapse a').hover(function() {
+        $(this).css('color', '#dab23f')
+      }, function() {
+        $(this).css('color', 'gray')
         $('.header .navbar .navbar-collapse .active a').css('color', '#dab23f');
-      }
-    });
+      });;
+      $('#nv1').hide();
+      $('#nv2').show();
+      $('.navbar').css('background-color', '#fff');
+      $('.header .navbar .navbar-collapse a').css('color', 'gray');
+      $('.pre').css('margin-top', '100px');
+    }
     </script>
     <script>
       var map;
