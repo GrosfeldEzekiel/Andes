@@ -207,3 +207,7 @@ i{
   color: gray;
   text-decoration: none;
 }
+.image1 img{
+  width: 100px;
+  height: 100px;
+}
