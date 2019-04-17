@@ -20,6 +20,15 @@
 
 <!-- SCRIPTS -->
 <script type="text/javascript">
+  $(function(){
+      if ($(window).innerWidth() < 600) {
+        $('.images img').css('width', '100px');
+        $('.images img').css('height', '100px')
+      }else{
+      }
+  })
+</script>
+<script type="text/javascript">
   $('.header .navbar .navbar-collapse a').hover(function() {
     $(this).css('color', '#dab23f')
   }, function() {
