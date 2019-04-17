@@ -96,7 +96,7 @@
 }
 .reserva{
   color: white;
-  background-color: #404040;
+  background-color: #dab23f;
   padding: 10%;
   text-align: center;
   display: inline-table;
@@ -105,14 +105,14 @@
 .reserva:hover{
   color: white;
   text-decoration: none;
-  background-color: #848484;
+  background-color: #f9cc4a;
 }
 .fotos{
   overflow: hidden;
 }
 .reserva1{
   color: white;
-  background-color: #404040;
+  background-color: #dab23f;
   padding: 1%;
   text-align: center;
   width: 100%;
@@ -121,7 +121,7 @@
 .reserva1:hover{
   color: white;
   text-decoration: none;
-  background-color: #848484;
+  background-color: #f9cc4a;
 }
 .link1{
   height: 50px;
@@ -164,4 +164,25 @@ i{
 #email:hover{
   text-decoration: none;
   color: #ff9c36;
+}
+.footer{
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  background-color: #232323;
+  text-align: center;
+  bottom: auto;
+}
+.container{
+  margin-top: 20px;
+  color: #fff;
+  font-family: "Montserrat", "Robot", sans-serif;
+}
+#foot{
+  color: #fff;
+  font-weight: 300;
+}
+#foot1{
+  color: #fff;
+  font-weight: 500;
 }
