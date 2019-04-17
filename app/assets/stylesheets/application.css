@@ -186,3 +186,24 @@ i{
   color: #fff;
   font-weight: 500;
 }
+.images{
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image img{
+  width: 200px;
+  height: 200px;
+}
+.image img:hover{
+  width: 210px;
+  height: 210px;
+}
+.images a{
+  color: gray;
+  font-family: "Montserrat", "Roboto", sans-serif;
+}
+.images a:hover{
+  color: gray;
+  text-decoration: none;
+}
