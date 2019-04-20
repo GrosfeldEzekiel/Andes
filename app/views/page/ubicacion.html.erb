@@ -29,23 +29,6 @@
     <div id="map"></div>
 
 <!-- SCRIPTS -->
-<script type='text/javascript'>
-
-(function()
-{
-  if( window.localStorage )
-  {
-    if( !localStorage.getItem('firstLoad') )
-    {
-      localStorage['firstLoad'] = true;
-      window.location.reload();
-    }
-    else
-      localStorage.removeItem('firstLoad');
-  }
-})();
-
-</script>
     <script type="text/javascript">
       $(function min(){
         $('#il').animate({marginTop: "90px"}, 2000, function(){$('#il').animate({marginTop: "-90px"}, 1000, function(){min(), 10})})
