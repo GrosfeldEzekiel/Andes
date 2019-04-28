@@ -32,6 +32,9 @@
 <!-- SCRIPTS -->
 
     <script type="text/javascript">
+      $(function min(){
+        $('#il').animate({marginTop: "90px"}, 2000, function(){$('#il').animate({marginTop: "-90px"}, 1000, function(){min(),10})})
+      });
       $(function(){
         $('#il').on('click', function(){
           $('html, body').animate({scrollTop: $(".text").offset().top-100}, 2000)
@@ -112,4 +115,3 @@
         marker = new google.maps.Marker({position: ubicacion, map: map})
       }
     </script>
-    

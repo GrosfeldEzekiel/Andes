@@ -47,6 +47,9 @@ La bahía Serena está a 1 km del departamento. El aeropuerto más cercano es el
 
 
 <script type="text/javascript">
+  $(function min(){
+    $('#ii').animate({marginTop: "90px"}, 2000, function(){$('#ii').animate({marginTop: "-90px"}, 1000, function(){min(),10})})
+  });
   $(function(){
     $('#ii').on('click', function(){
       $('html, body').animate({scrollTop: $(".text").offset().top-100}, 2000)
