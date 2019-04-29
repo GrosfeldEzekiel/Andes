@@ -32,14 +32,23 @@
 <!-- SCRIPTS -->
 
     <script type="text/javascript">
+      x = 0;
       $(function min(){
-        $('#il').animate({marginTop: "90px", opacity: 0.3}, 2000, function(){$('#il').animate({marginTop: "-90px", opacity: 1}, 1000, function(){min(),10})})
+        x += 1;
+        $('#il').animate({marginTop: "90px", opacity: 0.3}, 2000, function(){
+          $('#il').animate({marginTop: "-90px", opacity: 1}, 1000, function(){
+            min(),10})})
       });
       $(function(){
         $('#il').on('click', function(){
           $('html, body').animate({scrollTop: $(".text").offset().top-100}, 2000)
         })
-      })
+      });
+      setTimeout(function(){
+        if(x < 2){
+          location.reload();
+        };
+      }, 5000)
     </script>
     <script type="text/javascript">
       $(function(){
