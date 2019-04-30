@@ -224,3 +224,6 @@ i{
   margin-top: 15px;
   margin-bottom: 15px;
 }
+a:-moz-focusring{
+  outline:0;
+}
