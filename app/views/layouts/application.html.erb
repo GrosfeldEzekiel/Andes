@@ -26,9 +26,17 @@
   </head>
 
   <body>
+    <div class="preload">
+    </div>
     <%= render 'layouts/nav'%>
     <%= yield %>
     <%= render 'layouts/footer' %>
+    <script type="text/javascript">
+      $(window).load(function() {
+		// Animate loader off screen
+		$(".preload").fadeOut("slow");;
+	});
+    </script>
     <script type="text/javascript">
       $('li.active').removeClass('active');
       $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
